@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { TailSpin } from  'react-loader-spinner'
+import  TailSpin  from  'react-loader-spinner'
 import React from "react";
 import MovieList from "@/components/movielist";
 import axios from "axios";
