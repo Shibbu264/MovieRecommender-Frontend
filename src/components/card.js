@@ -20,9 +20,9 @@ if(movies.length){
                     movies.map((movie, index) => (
 
 
-                        <div class="max-w-sm p-6 mx-[5%] my-5 w-80  sm:w-96 h-fit bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <div key={index} class="max-w-sm p-6 mx-[5%] my-5 w-80  sm:w-96 h-fit bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                             <a href="#">
-                                <h5 key={index} class="mb-5 text-center text-2xl h-12 font-bold tracking-tight text-gray-900 dark:text-white">{movie}</h5>
+                                <h5  class="mb-5 text-center text-2xl h-12 font-bold tracking-tight text-gray-900 dark:text-white">{movie}</h5>
                             </a>
                             <img className="my-4 mb-6 block mx-auto w-64 h-64" src={movieIMAGE[index]} />
                             <a href={moviePath[index]} target="_blank" rel="no-referrer" class="flex mx-auto w-fit justify-center items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
