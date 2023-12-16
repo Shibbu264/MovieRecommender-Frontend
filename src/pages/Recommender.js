@@ -41,6 +41,28 @@ const MovieRecommender = () => {
         }
       };
 
+
+      const streamoptions = async (movieTitle) => {
+        try {
+        
+          const requestData = {
+            movie: movieTitle,
+           
+          };
+         
+          const response = await axios.post('/api/streamingoptions', requestData);
+          const data = await response.data;
+         console.log(data)
+        return data
+        } catch (error) {
+
+        toast.error("Error fetching streaming options",error)
+         
+        
+
+        }
+      };
+
   return (
     <>
     <ToastContainer />
@@ -56,7 +78,7 @@ const MovieRecommender = () => {
         wrapperStyle={{}}
         wrapperClass=""
         visible={true}
-      /> </div>:<Card movies={recommendmovies} movietitle={movietitle} movieIMAGE={movieIMAGE} moviePath={moviePath}  />}
+      /> </div>:<Card movies={recommendmovies} streamoptions={streamoptions} movietitle={movietitle} movieIMAGE={movieIMAGE} moviePath={moviePath}  />}
       <CONNECTWITHME/>
     </div>
     </>
